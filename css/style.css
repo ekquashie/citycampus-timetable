@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial Rounded MT Bold';
+}
+html, body {
+    height: 100%;
+}
+
+/**********login-page**********/
+section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+section .imgBox {
+    position: relative;
+    height: 100%;
+    width: 50%
+}
+section .imgBox::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: linear-gradient(225deg, #1C197E, #1C197E);
+    mix-blend-mode: screen;
+}
+section .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section .contentBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+section .contentBox .formBox {
+    width: 50%;
+}
+section .contentBox .formBox h2 {
+    color: #1C197E;
+    font-weight: 600;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #1C197E;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+section .contentBox .formBox .inputBox {
+    margin-bottom: 20px;
+}
+section .contentBox .formBox .inputBox span{
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #535353;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+section .contentBox .formBox .inputBox input {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid  #1C197E;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #535353;
+    background: transparent;
+    border-radius: 30px;
+}
+section .contentBox .formBox .inputBox input[type="submit"] {
+    background: #1C197E;
+    color: white;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+section .contentBox .formBox .inputBox input[type="submit"]:hover {
+    background:rgb(20, 17, 105);
+}
+
+.body-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: calc(100% - 230px);
+    height: 100%;
+    margin-left: 230px;
+    overflow: auto;
+    transition: all 0.4s ease;
+}
+
+/******************** Dashboard *******************/
+.db-analytics {
+    display: flex;
+}
+.db-analytic {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+    height: 80px;
+    width: 200px;
+}
+.analytic-icon{
+    background: #1C197E;
+    color: #fff;
+    font-size: 50px;
+    height: 100%;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.analytic-text {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #817ECF;
+    height: 100%;
+    width: 60%;
+}
+.analytic-text .number {
+    font-size: 45px;
+}
+.analytic-text .number, .analytic-text p{
+    font-weight: 530;
+    overflow: hidden;
+    color: #1C197E;
+}
+.analytic-text p {
+    font-size: 20px;
+}
+
+/******************** Courses  ********************/
+.courses, .halls {
+    flex-direction: column;
+    justify-content: space-around;
+}
+.dataTables_filter, .dataTables_length{
+    margin-bottom: 10px;
+}
+.dataTables_filter label input[type=search] {
+    padding: 10px 5px;
+    border: 1px solid #1C197E;
+    border-radius: 30px;
+    font-size: 15px;
+    outline: none;
+}
+.course-container, .hall-container {
+    width: 85%;
+    padding: 0 10px;
+}
+
+td {
+    border: 1px solid #1C197E;
+}
+th {
+    color: #fff;
+}
+#course-reg, #course-modify {
+    width: 20%;
+}
+.table-headings .course-headings, .hall-headings {
+    background-color: #1C197E;
+    text-align: left;
+    font-size: 14px;
+    padding: 10px 10px;
+}
+.course-data td, .hall-data td {
+    font-size: 15px;
+    padding-left: 10px;
+}
+.course-data #reg {
+    text-align: center;
+}
+.course-modify, .hall-modify {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.modifyBtn {
+    font-size: 15px;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 30px;
+    color: white;
+}
+.course-modify a, .hall-modify a {
+    text-decoration: none;
+}
+.course-modify #course-update, .hall-modify #hall-update {
+    background-color: #1C197E;
+}
+.course-modify #course-delete, #hall-delete {
+    background-color: red;
+}
+.add-course, .add-hall {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1C197E;
+    padding: 10px;
+    color: white;
+    border-radius: 50px;
+}
+.add-course span, .add-hall span {
+    margin-left: 5px;
+}
+.hall-container {
+    width: 60%;
+    padding: 0 10px;
+}
+#hall-modify {
+    width: 30%;
+}
+#add-link{
+    text-decoration: none;
+    border: none;
+    background: none;
+}
+#add-link:hover {
+    cursor: pointer;
+}
+
+/* course and hall modal */
+#modalBG {
+    display: block;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    background: rgb(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+}
+.modal {
+    background-color: #fff;
+    width: 40%;
+    margin: 20px auto;
+    padding: 50px 30px;
+    text-align: center;
+}
+.modalHeading {
+    color: #1C197E;
+    margin-bottom: 20px;
+}
+.fileSubmit {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.modalBtn {
+    background-color: #1C197E;
+    color: #fff;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px 15px;
+    border: none;
+}
+.modalBtn:hover, input#file-upload-button:hover {
+    cursor: pointer;
+}
+.hallInput {
+    width: 100%;
+    margin: 3px 0;
+    padding: 10px;
+}
+.hallInput:focus {
+    outline: #1C197E;
+}
+
+/******************** mobile (Responsive) ********************/
+@media (max-width: 768px) {
+
+    /* .body-content {
+        position: absolute;
+        height: 100%;
+        width: calc(100% - 60px);
+        left: 60px;
+    } */
+    .course-modify .modifyBtn{
+        margin-top: 5px;
+    }
+
+    /* Login Page */
+    section .imgBox {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    section .contentBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    section .contentBox .formBox {
+        background: rgb(255 255 255 / 0.9);
+        width: 100%;
+        padding: 40px;
+        margin: 50px;
+    }
+}
