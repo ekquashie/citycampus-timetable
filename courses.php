@@ -1,11 +1,11 @@
 <?php //$results = mysqli_query($conn, "SELECT * FROM courses") ?>
 
-<?php require('../components/header.php') ?>
+<?php require('components/header.php') ?>
   <title>Courses</title
 </head>
 
   <body>
-      <?php require('../components/nav.html') ?>
+      <?php require('components/nav.html') ?>
 
       <div class="body-content courses">
 
@@ -40,8 +40,8 @@
         <div id="modalBG">
           <div class="modal">
             <h2 class="modalHeading">Upload Course File</h2>
-            <form class="fileSubmit" action="../db.php">
-              <input type="file" id="myFile" name="filename">
+            <form class="fileSubmit" method="POST" action="db/database.php">
+              <input type="file" id="myFile" name="coursefile">
               <input type="submit" class="modalBtn">
             </form>
           </div>
@@ -59,6 +59,6 @@
   <script>
     $('.course-table').DataTable({});
   </script>
-  <script src="../js/functions.js"></script>
+  <script src="js/functions.js"></script>
   </body>
 </html>

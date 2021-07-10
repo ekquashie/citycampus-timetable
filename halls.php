@@ -1,11 +1,11 @@
 <?php //$results = mysqli_query($conn, "SELECT * FROM halls") ?>
 
-<?php require('../components/header.php') ?>
+<?php require('components/header.php') ?>
   <title>Exam Halls</title>
 </head>
 
   <body>
-      <?php require('../components/nav.html') ?>
+      <?php require('components/nav.html') ?>
       <div class="body-content halls">
 
         <div class="hall-container">
@@ -37,9 +37,9 @@
         <div id="modalBG">
           <div class="modal">
             <h2 class="modalHeading">Add New Exam Hall</h2>
-            <form class="fileSubmit" id="hallForm" action="../db.php">
-              <input type="text" placeholder="Name" class="hallInput">
-              <input type="number" placeholder="Capacity" class="hallInput">
+            <form class="fileSubmit" id="hallForm" method="POST" action="db/database.php">
+              <input type="text" placeholder="Name" name="hallname" class="hallInput">
+              <input type="number" placeholder="Capacity" name="hallcapacity" class="hallInput">
               <input type="submit" class="modalBtn">
             </form>
           </div>
@@ -57,6 +57,6 @@
   <script>
     $('.hall-table').DataTable({});
   </script>
-  <script src="../js/functions.js"></script>
+  <script src="js/functions.js"></script>
   </body>
 </html>

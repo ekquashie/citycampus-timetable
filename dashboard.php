@@ -5,12 +5,12 @@
 //$hallsRow = $mysqli_num_rows($halls);
 ?>
 
-<?php require('../components/header.php') ?>
+<?php require('components/header.php') ?>
   <title>Dashboard</title>
 </head>
 
   <body>
-      <?php require('../components/nav.html') ?>
+      <?php require('components/nav.html') ?>
       <div class="body-content dashboard">
 
         <div class="db-analytics">
