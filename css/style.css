@@ -247,7 +247,7 @@ th {
 
 /* course and hall modal */
 #modalBG {
-    display: block;
+    display: none;
     z-index: 1;
     position: fixed;
     top: 0;
