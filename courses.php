@@ -41,7 +41,7 @@
           <div class="modal">
             <h2 class="modalHeading">Upload Course File</h2>
             <form class="fileSubmit" method="POST" action="db/database.php">
-              <input type="file" id="myFile" name="coursefile">
+              <input type="file" id="myFile" name="coursefile" required>
               <input type="submit" class="modalBtn">
             </form>
           </div>

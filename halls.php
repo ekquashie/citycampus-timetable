@@ -38,8 +38,8 @@
           <div class="modal">
             <h2 class="modalHeading">Add New Exam Hall</h2>
             <form class="fileSubmit" id="hallForm" method="POST" action="db/database.php">
-              <input type="text" placeholder="Name" name="hallname" class="hallInput">
-              <input type="number" placeholder="Capacity" name="hallcapacity" class="hallInput">
+              <input type="text" placeholder="Name" name="hallname" class="hallInput" required>
+              <input type="number" placeholder="Capacity" name="hallcapacity" class="hallInput" required>
               <input type="submit" class="modalBtn">
             </form>
           </div>
