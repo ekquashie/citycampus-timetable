@@ -261,11 +261,12 @@ th {
     background-color: #fff;
     width: 40%;
     margin: 20px auto;
-    padding: 50px 30px;
+    padding: 20px 30px;
     text-align: center;
 }
 .modalHeading {
     color: #1C197E;
+    font-size: 35px;
     margin-bottom: 20px;
 }
 .fileSubmit {
