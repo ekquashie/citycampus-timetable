@@ -22,7 +22,7 @@
     <div class="contentBox">
       <div class="formBox">
         <h2>Login</h2>
-        <form method="POST" action="db/database.php">
+        <form method="POST" action="db/login.php">
           <div class="inputBox">
             <span>Username</span>
             <input type="text" name="username">

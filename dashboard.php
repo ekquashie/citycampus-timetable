@@ -1,8 +1,9 @@
 <?php 
-//$halls = mysqli_query($conn, "SELECT * FROM halls")
-//$courses = mysqli_query($conn, "SELECT * FROM courses")
-//$coursesRow = mysqli_num_rows($courses)
-//$hallsRow = $mysqli_num_rows($halls);
+require_once("db/conn.php");
+//$courses = mysqli_query($conn, "SELECT * FROM courses");
+//$coursesRow = mysqli_num_rows($courses);
+$halls = mysqli_query($conn, "SELECT * FROM halls");
+$hallsRow = mysqli_num_rows($halls);
 ?>
 
 <?php require('components/header.php') ?>
@@ -19,7 +20,7 @@
               <i class="fas fa-book"></i>
             </div>
             <div class="analytic-text">
-              <span class="number"><?php #$coursesRow ?>20</span>
+              <span class="number"><?php //echo $coursesRow ?></span>
               <p>Courses</p>
             </div>
           </div>
@@ -29,7 +30,7 @@
               <i class="fas fa-home"></i>
             </div>
             <div class="analytic-text">
-              <span class="number"><?php #$hallsRow ?>20</span>
+              <span class="number"><?php echo $hallsRow ?></span>
               <p>Halls</p>
             </div>
           </div>

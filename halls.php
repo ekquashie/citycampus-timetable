@@ -1,4 +1,6 @@
-<?php //$results = mysqli_query($conn, "SELECT * FROM halls") ?>
+<?php 
+require_once('db/conn.php');
+$results = mysqli_query($conn, "SELECT * FROM halls") ?>
 
 <?php require('components/header.php') ?>
   <title>Exam Halls</title>
@@ -19,17 +21,17 @@
             </thead>
             <tbody>
 
-            <?php //while($row = mysqli_fetch_array($results)) { ?>
+            <?php while($row = mysqli_fetch_array($results)) { ?>
 
               <tr class="hall-data">
-                <td><?php #echo $row['hall'] ?>NLC Left Wing</td>
-                <td><?php #echo $row['capacity'] ?>210</td>
+                <td><?php echo $row['name'] ?></td>
+                <td><?php echo $row['capacity'] ?></td>
                 <td class="hall-modify">
-                  <a href="#"><div class="modifyBtn" id="hall-update">Update</div></a>
-                  <a href="#"><div class="modifyBtn" id="hall-delete">Delete</div></a>
+                  <a href="db/database.php?edit=<?php echo $row['id']?>"><div class="modifyBtn" id="hall-update">Update</div></a>
+                  <a href="db/database.php?del=<?php echo $row['id']; ?>"><div class="modifyBtn" id="hall-delete">Delete</div></a>
                 </td>
               </tr>
-            <?php //} ?>
+            <?php } ?>
             </tbody>
           </table>
         </div>
@@ -40,7 +42,7 @@
             <form class="fileSubmit" id="hallForm" method="POST" action="db/database.php">
               <input type="text" placeholder="Name" name="hallname" class="hallInput" required>
               <input type="number" placeholder="Capacity" name="hallcapacity" class="hallInput" required>
-              <input type="submit" class="modalBtn">
+              <input type="submit" class="modalBtn" name="hallsubmit">
             </form>
           </div>
         </div>
@@ -54,9 +56,9 @@
         
       </div>
     
-  <script>
-    $('.hall-table').DataTable({});
-  </script>
-  <script src="js/functions.js"></script>
+    <script>
+      $('.hall-table').DataTable({});
+    </script>
+    <script src="js/functions.js"></script>
   </body>
 </html>
