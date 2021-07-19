@@ -42,7 +42,11 @@ $results = mysqli_query($conn, "SELECT * FROM halls") ?>
             <form class="fileSubmit" id="hallForm" method="POST" action="db/database.php">
               <input type="text" placeholder="Name" name="hallname" class="hallInput" required>
               <input type="number" placeholder="Capacity" name="hallcapacity" class="hallInput" required>
+              <?php //if(update == true): ?>
+                <!-- <input type="submit" class="modalBtn" name="hallupdate"> -->
+              <?php //else: ?>
               <input type="submit" class="modalBtn" name="hallsubmit">
+              <?php //endif ?>
             </form>
           </div>
         </div>
