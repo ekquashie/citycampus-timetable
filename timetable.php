@@ -4,11 +4,11 @@
 </head>
 
   <body>
-      <?php require('components/nav.html') ?>
+    <?php require('components/nav.html') ?>
 
-      <div class="body-content timetable">
-        
-      </div>
+    <div class="body-content timetable">
+      
+    </div>
     
   <script src='script.js'></script>
   </body>
