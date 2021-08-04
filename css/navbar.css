@@ -93,7 +93,11 @@ body {
 .nav-logout a i {
     margin-right: 10px;
 }
-
+@media print {
+    .sidebar {
+        display: none;
+    }
+}
 @media screen and (max-width: 760px) {
     /* .sidebar {
         width: 60px;

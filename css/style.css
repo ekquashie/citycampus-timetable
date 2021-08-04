@@ -97,16 +97,18 @@ section .contentBox .formBox .inputBox input[type="submit"]:hover {
 }
 
 .body-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
     width: calc(100% - 230px);
     height: 100%;
     margin-left: 230px;
     overflow: auto;
     transition: all 0.4s ease;
+}
+.dashboard, .halls, .courses {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 /******************** Dashboard *******************/
@@ -295,6 +297,36 @@ th {
 }
 .hallInput:focus {
     outline: #1C197E;
+}
+
+
+/***************** Timetable *******************/
+.timetable-container {
+    width: 100%;
+}
+.timetable-heading #heading {
+    font-size: 18px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media print {
 }
 
 /******************** mobile (Responsive) ********************/

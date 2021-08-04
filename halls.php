@@ -22,7 +22,6 @@ $results = mysqli_query($conn, "SELECT * FROM halls") ?>
             <tbody>
 
             <?php while($row = mysqli_fetch_array($results)) { ?>
-
               <tr class="hall-data">
                 <td><?php echo $row['name'] ?></td>
                 <td><?php echo $row['capacity'] ?></td>

@@ -4,7 +4,7 @@
 
   <body>
       <?php require('components/nav.html') ?>
-      <div class="body-content">
+      <div class="body-content settings">
         
       </div>
     
