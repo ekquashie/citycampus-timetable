@@ -1,15 +1,21 @@
 <?php # ?>
-<?php require('components/header.php') ?>
-  <title>Timetable</title>
+<?php include('components/header.php') ?>
+  <title> Schedule Timetable</title>
 </head>
+<body>
+	<?php require('components/nav.html') ?>
 
-  <body>
-    <?php require('components/nav.html') ?>
+	<div class="body-content timetable">
 
-    <div class="body-content timetable">
-      
-    </div>
-    
-  <script src='script.js'></script>
-  </body>
+		<p>Date: <input type="text" id="datepicker" size="30"></p>
+
+	</div>
+
+	<script>
+		$( function() {
+    		$( "#datepicker" ).datepicker({dateFormat: 'dd MM, yy'});
+  		});
+	</script>
+	<script src='js/functions.js'></script>
+</body>
 </html>
