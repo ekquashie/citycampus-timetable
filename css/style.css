@@ -1,367 +1,506 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial Rounded MT Bold';
-}
 html, body {
-    height: 100%;
+  height: 100%;
+  width: 100%;
 }
 
-/**********login-page**********/
-section {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-}
-section .imgBox {
-    position: relative;
-    height: 100%;
-    width: 50%
-}
-section .imgBox::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background: linear-gradient(225deg, #1C197E, #1C197E);
-    mix-blend-mode: screen;
-}
-section .imgBox img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-section .contentBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Arial Rounded MT Bold";
 }
 
-section .contentBox .formBox {
-    width: 50%;
+.dataTables_filter, .dataTables_length {
+  margin-bottom: 10px;
 }
-section .contentBox .formBox h2 {
-    color: #1C197E;
-    font-weight: 600;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    border-bottom: 4px solid #1C197E;
-    display: inline-block;
-    letter-spacing: 1px;
+
+.dataTables_filter label input[type=search] {
+  padding: 10px 5px;
+  border: 1px solid #1C197E;
+  border-radius: 30px;
+  font-size: 15px;
+  outline: none;
 }
-section .contentBox .formBox .inputBox {
-    margin-bottom: 20px;
+
+.login-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
-section .contentBox .formBox .inputBox span{
-    font-size: 16px;
-    margin-bottom: 5px;
-    display: inline-block;
-    color: #535353;
-    font-weight: 300;
-    font-size: 16px;
-    letter-spacing: 1px;
+.login-container .imgBox {
+  position: relative;
+  height: 100%;
+  width: 50%;
 }
-section .contentBox .formBox .inputBox input {
-    width: 100%;
-    padding: 10px 20px;
-    outline: none;
-    font-weight: 400;
-    border: 1px solid  #1C197E;
-    font-size: 16px;
-    letter-spacing: 1px;
-    color: #535353;
-    background: transparent;
-    border-radius: 30px;
+.login-container .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-section .contentBox .formBox .inputBox input[type="submit"] {
-    background: #1C197E;
-    color: white;
-    outline: none;
-    border: none;
-    font-weight: 500;
-    cursor: pointer;
+.login-container .imgBox::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: linear-gradient(225deg, #1C197E, #1C197E);
+  mix-blend-mode: screen;
 }
-section .contentBox .formBox .inputBox input[type="submit"]:hover {
-    background:rgb(20, 17, 105);
+.login-container .contentBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  height: 100%;
+}
+.login-container .contentBox .formBox {
+  width: 50%;
+}
+.login-container .contentBox .formBox .inputBox {
+  margin-bottom: 20px;
+}
+.login-container .contentBox .formBox .inputBox span {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: inline-block;
+  color: #535353;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.login-container .contentBox .formBox .inputBox input {
+  width: 100%;
+  padding: 10px 20px;
+  outline: none;
+  font-weight: 400;
+  border: 1px solid #1C197E;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #535353;
+  background: transparent;
+  border-radius: 30px;
+}
+.login-container .contentBox .formBox .inputBox input[type=submit] {
+  background: #1C197E;
+  color: white;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+.login-container .contentBox .formBox .inputBox input[type=submit]:hover {
+  background: #141169;
+}
+.login-container .contentBox .formBox h2 {
+  color: #1C197E;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  border-bottom: 4px solid #1C197E;
+  display: inline-block;
+  letter-spacing: 1px;
 }
 
 .body-content {
-    width: calc(100% - 230px);
-    height: 100%;
-    margin-left: 230px;
-    overflow: auto;
-    transition: all 0.4s ease;
-}
-.dashboard, .halls, .courses {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-/******************** Dashboard *******************/
-.db-analytics {
-    display: flex;
-}
-.db-analytic {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 10px;
-    height: 80px;
-    width: 200px;
-}
-.analytic-icon{
-    background: #1C197E;
-    color: #fff;
-    font-size: 50px;
-    height: 100%;
-    width: 45%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.analytic-text {
-    display: flex;
-    overflow: hidden;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #817ECF;
-    height: 100%;
-    width: 60%;
-}
-.analytic-text .number {
-    font-size: 45px;
-}
-.analytic-text .number, .analytic-text p{
-    font-weight: 530;
-    overflow: hidden;
-    color: #1C197E;
-}
-.analytic-text p {
-    font-size: 20px;
-}
-
-/******************** Courses  ********************/
-.courses, .halls {
-    flex-direction: column;
-    justify-content: space-around;
-}
-.dataTables_filter, .dataTables_length{
-    margin-bottom: 10px;
-}
-.dataTables_filter label input[type=search] {
-    padding: 10px 5px;
-    border: 1px solid #1C197E;
-    border-radius: 30px;
-    font-size: 15px;
-    outline: none;
-}
-.course-container, .hall-container {
-    width: 85%;
-    padding: 0 10px;
+  width: calc(100% - 230px);
+  height: 100%;
+  margin-left: 230px;
+  overflow: auto;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 td {
-    border: 1px solid #1C197E;
+  border: 1px solid #1C197E;
 }
+
 th {
-    color: #fff;
-}
-#course-reg, #course-modify {
-    width: 20%;
-}
-.table-headings .course-headings, .hall-headings {
-    background-color: #1C197E;
-    text-align: left;
-    font-size: 14px;
-    padding: 10px 10px;
-}
-.course-data td, .hall-data td {
-    font-size: 15px;
-    padding-left: 10px;
-}
-.course-data #reg {
-    text-align: center;
-}
-.course-modify, .hall-modify {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.modifyBtn {
-    font-size: 15px;
-    text-align: center;
-    padding: 5px 10px;
-    border-radius: 30px;
-    color: white;
-}
-.course-modify a, .hall-modify a {
-    text-decoration: none;
-}
-.course-modify #course-update, .hall-modify #hall-update {
-    background-color: #1C197E;
-}
-.course-modify #course-delete, #hall-delete {
-    background-color: red;
-}
-.add-course, .add-hall {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #1C197E;
-    padding: 10px;
-    color: white;
-    border-radius: 50px;
-}
-.add-course span, .add-hall span {
-    margin-left: 5px;
-}
-.hall-container {
-    width: 70%;
-    padding: 0 10px;
-}
-#hall-modify {
-    width: 30%;
-}
-#add-link{
-    text-decoration: none;
-    border: none;
-    background: none;
-}
-#add-link:hover {
-    cursor: pointer;
+  color: #fff;
 }
 
-/* course and hall modal */
-#modalBG {
-    display: none;
-    z-index: 1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow: auto;
-    background: rgb(0,0,0,0.6);
-    width: 100%;
-    height: 100%;
+.dashboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
-.modal {
-    background-color: #fff;
-    width: 40%;
-    margin: 20px auto;
-    padding: 20px 30px;
-    text-align: center;
+.dashboard .db-analytics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
-.modalHeading {
-    color: #1C197E;
-    font-size: 35px;
-    margin-bottom: 20px;
+.dashboard .db-analytics .db-analytic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+  height: 80px;
+  width: 200px;
 }
-.fileSubmit {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
+.dashboard .db-analytics .db-analytic .analytic-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #817ECF;
+  height: 100%;
+  width: 60%;
 }
-.modalBtn {
-    background-color: #1C197E;
-    color: #fff;
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px 15px;
-    border: none;
+.dashboard .db-analytics .db-analytic .analytic-text p {
+  font-weight: 500;
+  overflow: hidden;
+  color: #1C197E;
+  font-size: 20px;
 }
-.modalBtn:hover, input#file-upload-button:hover {
-    cursor: pointer;
+.dashboard .db-analytics .db-analytic .analytic-text .number {
+  font-size: 45px;
+  font-weight: 530;
+  overflow: hidden;
+  color: #1C197E;
 }
-.hallInput {
-    width: 100%;
-    margin: 3px 0;
-    padding: 10px;
-}
-.hallInput:focus {
-    outline: #1C197E;
-}
-
-
-/***************** Timetable *******************/
-.timetable-container {
-    width: 100%;
-}
-.timetable-heading #heading {
-    font-size: 18px;
-    text-align: center;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media print {
+.dashboard .db-analytics .db-analytic .analytic-icon {
+  background: #1C197E;
+  color: #fff;
+  font-size: 50px;
+  height: 100%;
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-/******************** mobile (Responsive) ********************/
-@media (max-width: 768px) {
+.courses {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.courses .course-container {
+  width: 85%;
+  padding: 0 10px;
+}
+.courses .course-container .course-table .table-headings th {
+  background-color: #1C197E;
+  text-align: left;
+  font-size: 14px;
+  padding: 10px 10px;
+}
+.courses .course-container .course-table .table-headings #course-reg {
+  width: 20%;
+}
+.courses .course-container .course-table .table-headings #course-modfiy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 20%;
+}
+.courses .course-container .course-data .course-modify a {
+  text-decoration: none;
+}
+.courses .course-container .course-data .course-modify #course-update {
+  background-color: #1C197E;
+}
+.courses .course-container .course-data .course-modify #course-delete {
+  background-color: red;
+}
+.courses .course-container .course-data .course-modify a {
+  text-decoration: none;
+}
+.courses .course-container .course-data .course-modify .modifyBtn {
+  font-size: 15px;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 30px;
+  color: white;
+}
+.courses #add-link {
+  background: none;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.courses #add-link .add-course {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #1C197E;
+  padding: 10px;
+  color: white;
+  border-radius: 50px;
+}
+.courses #add-link span {
+  margin-left: 5px;
+}
+.courses #add-link:hover {
+  cursor: pointer;
+}
+.courses #modalBG {
+  display: none;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+}
+.courses #modalBG .modal {
+  background-color: #fff;
+  width: 40%;
+  margin: 20px auto;
+  padding: 20px 30px;
+  text-align: center;
+}
+.courses #modalBG .modal form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.courses #modalBG .modal form .modalBtn {
+  background-color: #1C197E;
+  color: #fff;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border: none;
+}
+.courses #modalBG .modal .modalHeading {
+  color: #1C197E;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
 
-    /* .body-content {
-        position: absolute;
-        height: 100%;
-        width: calc(100% - 60px);
-        left: 60px;
-    } */
-    .course-modify .modifyBtn{
-        margin-top: 5px;
-    }
-
-    /* Login Page */
-    section .imgBox {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-    section .contentBox {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-    }
-    section .contentBox .formBox {
-        background: rgb(255 255 255 / 0.9);
-        width: 100%;
-        padding: 40px;
-        margin: 50px;
-    }
+.halls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.halls .hall-container {
+  width: 85%;
+  padding: 0 10px;
+}
+.halls .hall-container .table-headings th {
+  background-color: #1C197E;
+  text-align: left;
+  font-size: 14px;
+  padding: 10px 10px;
+}
+.halls .hall-container .hall-data {
+  font-size: 15px;
+  padding-left: 10px;
+}
+.halls .hall-container .hall-data .hall-modify {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.halls .hall-container .hall-data .hall-modify a {
+  text-decoration: none;
+}
+.halls .hall-container .hall-data .hall-modify .modifyBtn {
+  font-size: 15px;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 30px;
+  color: white;
+}
+.halls .hall-container .hall-data .hall-modify #hall-update {
+  background-color: #1C197E;
+}
+.halls .hall-container .hall-data .hall-modify #hall-delete {
+  background-color: red;
+}
+.halls #add-link {
+  text-decoration: none;
+  border: none;
+  background: none;
+}
+.halls #add-link:hover {
+  cursor: pointer;
+}
+.halls #add-link .add-hall {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #1C197E;
+  padding: 10px;
+  color: white;
+  border-radius: 50px;
+}
+.halls #add-link span {
+  margin-left: 5px;
+}
+.halls #add-link:hover {
+  cursor: pointer;
+}
+.halls #modalBG {
+  display: none;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+}
+.halls #modalBG .modal {
+  background-color: #fff;
+  width: 40%;
+  margin: 20px auto;
+  padding: 20px 30px;
+  text-align: center;
+}
+.halls #modalBG .modal form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.halls #modalBG .modal form .modalBtn {
+  background-color: #1C197E;
+  color: #fff;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border: none;
+}
+.halls #modalBG .modal .hallInput {
+  width: 100%;
+  margin: 3px 0;
+  padding: 10px;
+}
+.halls #modalBG .modal .hallInput:focus {
+  outline: #1C197E;
 }

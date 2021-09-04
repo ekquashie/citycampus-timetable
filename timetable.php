@@ -7,6 +7,19 @@
 
 	<div class="body-content timetable">
 
+		<form action="" class="timetable-form">
+			<label for="">
+
+			</label>
+			<input type="text">
+			<label for="">
+
+			</label><input type="text">
+			<label for="">
+
+			</label>
+			<input type="text">
+		</form>
 		<p>Date: <input type="text" id="datepicker" size="30"></p>
 
 	</div>

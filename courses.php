@@ -13,10 +13,10 @@
           <table class="course-table">
             <thead>
               <tr class="table-headings">
-                <th class="course-headings" id="course-code">Course Code</th>
-                <th class="course-headings" id="course-name">Course Name</th>
-                <th class="course-headings" id="course-reg">Students</th>
-                <th class="course-headings" id="course-modify">Modify</th>
+                <th id="course-code">Course Code</th>
+                <th id="course-name">Course Name</th>
+                <th id="course-reg">Students</th>
+                <th id="course-modify">Modify</th>
               </tr>
             </thead>
             <tbody>

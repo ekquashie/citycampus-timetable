@@ -14,9 +14,9 @@ $results = mysqli_query($conn, "SELECT * FROM halls") ?>
           <table class="hall-table">
             <thead>
               <tr class="table-headings">
-                <th class="hall-headings" id="hall-name">Hall Name</th>
-                <th class="hall-headings" id="hall-capacity">Hall Capacity</th>
-                <th class="hall-headings" id="hall-modify">Modify</th>
+                <th id="hall-name">Hall Name</th>
+                <th id="hall-capacity">Hall Capacity</th>
+                <th id="hall-modify">Modify</th>
               </tr>
             </thead>
             <tbody>

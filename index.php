@@ -15,7 +15,7 @@
   <title>Login Page</title>
 </head>
 <body>
-  <section>
+  <section class="login-container">
     <div class="imgBox">
       <img src="assets/img/cutie1.jpg" alt="bg">
     </div>
