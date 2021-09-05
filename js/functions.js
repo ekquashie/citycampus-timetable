@@ -40,4 +40,18 @@ function openContent(evt, content) {
   evt.currentTarget.className += " active";
 }
 
+function academicYear() {
+  var firstyear, secondyear, e;
+  firstyear = document.getElementById("year-select");
+  secondyear = document.getElementById("year-end");
+  e = firstyear.selectedIndex;
+
+  if(e == 1) {
+    secondyear.value = parseInt(firstyear.options[e].text) + 1;
+  } else if(e == 2) {
+    secondyear.value = parseInt(firstyear.options[e].text) + 1;
+  }
+
+}
+
 

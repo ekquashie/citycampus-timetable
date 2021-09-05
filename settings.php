@@ -15,19 +15,34 @@
 
         <div id="Academic" class="tabcontent">
           <form action="database.php" method="POST">
-            <section class="academic-year">
-              <h3>Academic Year</h3>
-              <label for="year">From</label>
-              <select name="year" id="1st-year">
+            <h4>Academic Year</h4>
+
+            <!-- Academic Year Settings -->
+            <section class="settings-section academic-container">
+              <select name="year" id="year-select" onchange="academicYear()">
+                <option selected="selected" value="Not Selected">Select Year</option>
                 <option value="<?php echo date('Y', strtotime('-1 year')); ?>"><?php echo date('Y', strtotime('-1 year')); ?></option>
                 <option value="<?php echo date('Y'); ?>"><?php echo date('Y'); ?></option>
+              </select>
+              <input type="text" id="year-end" disabled="disabled">
+            </section>
+
+            <!-- Select Semester -->
+            <label for="semester"><h4>Select Semester</h4></label>
+            <section class="settings-section semester-container">
+              <select name="semester-select" id="semester-select">
+                <option value="First Semester">First Semester</option>
+                <option value="Second Semester">Second Semester</option>
               </select>
             </section>
           </form>
         </div>
+      
 
         <div id="Schedule" class="tabcontent" style="display:none;">
-          Hi
+          <form action="database.php" method="POST">
+
+          </form>
         </div>
 
         </div>
