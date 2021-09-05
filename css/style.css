@@ -523,8 +523,8 @@ th {
       flex-wrap: wrap;
 }
 .settings .settings-container {
-  height: 60%;
-  width: 70%;
+  height: 80%;
+  width: 80%;
   border: 1px solid black;
   padding: 20px;
 }
@@ -535,12 +535,26 @@ th {
 .settings .settings-container .nav-tab button {
   background: none;
   font-size: 16px;
+  color: #817ECF;
   border: none;
-  padding: 5px;
+  padding: 10px;
   -webkit-transition: 0.1s;
   transition: 0.1s;
 }
 .settings .settings-container .nav-tab button:hover {
   cursor: pointer;
+  color: #1C197E;
+  font-weight: bold;
   border-bottom: 3px solid #1C197E;
+}
+.settings .settings-container .nav-tab .active {
+  color: #1C197E;
+  font-weight: bold;
+  border-bottom: 3px solid #1C197E;
+}
+.settings .settings-container .tabcontent {
+  padding: 10px;
+}
+.settings .settings-container .settings-content {
+  padding: 10px;
 }

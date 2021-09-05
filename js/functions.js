@@ -1,18 +1,43 @@
+// Hall and Courses Modal Box
 var modal = document.getElementById("modalBG");
-document.querySelector("#add-link").addEventListener('click', openModal);
-//document.querySelector('#addHall').addEventListener('click', openModal);
-//document.querySelector('.closeModal').addEventListener('click', closeModal);
+var link = document.querySelector("#add-link");
 
-function openModal() {
+if(link) {
+    link.addEventListener('click', openModal);
+
+    function openModal() {
     modal.style.display = "block";
-}
-function closeModal() {
-    modal.style.display = 'none';
-}
+    }
 
-window.onclick = function(event) {
-    if (event.target == modal) {
+    function closeModal() {
+    modal.style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
         modal.style.display = 'none';
+        }
     }
 }
+
+// Settings Page
+function openContent(evt, content) {
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  document.getElementById(content).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
 

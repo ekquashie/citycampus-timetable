@@ -78,14 +78,14 @@ html, body {
                     padding: 10px 20px;
                     outline: none;
                     font-weight: 400;
-                    border: 1px solid  #1C197E;
+                    border: 1px solid  $primary;
                     font-size: 16px;
                     letter-spacing: 1px;
                     color: $grey;
                     background: transparent;
                     border-radius: 30px;
                     &[type="submit"] {
-                        background: #1C197E;
+                        background: $primary;
                         color: white;
                         outline: none;
                         border: none;
@@ -127,7 +127,8 @@ th {
 }
 
 
-//Dashboard
+// Dashboard
+
 .dashboard {
     @include body-flex;
     .db-analytics {
@@ -175,7 +176,7 @@ th {
     }
 }
 
-//Courses
+// Courses Page
 
 .courses {
     @include body-flex;
@@ -270,6 +271,8 @@ th {
     }
 }
 
+// Halls Page
+
 .halls {
     @include body-flex;
     .hall-container {
@@ -359,11 +362,12 @@ th {
     }
 }
 
+// Settings Page
 .settings {
     @include body-flex;
     .settings-container {
-        height: 60%;
-        width: 70%;
+        height: 80%;
+        width: 80%;
         border: 1px solid black;
         padding: 20px;
         .nav-tab {
@@ -372,14 +376,28 @@ th {
             button {
                 background: none;
                 font-size: 16px;
+                color: $primary-300;
                 border: none;
-                padding: 5px;
+                padding: 10px;
                 transition: 0.1s;
                 &:hover {
                     cursor: pointer;
+                    color: $primary;
+                    font-weight: bold;
                     border-bottom: 3px solid $primary;
                 }
             }
+            .active {
+                color: $primary;
+                font-weight: bold;
+                border-bottom: 3px solid $primary;
+            }
+        }
+        .tabcontent {
+            padding: 10px;
+        }
+        .settings-content {
+            padding: 10px;
         }
     }
 }
