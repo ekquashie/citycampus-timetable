@@ -1,6 +1,7 @@
 html, body {
   height: 100%;
   width: 100%;
+  font-family: "Roboto", sans-serif;
 }
 
 * {
@@ -8,7 +9,6 @@ html, body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Arial Rounded MT Bold";
 }
 
 .dataTables_filter, .dataTables_length {
@@ -16,7 +16,7 @@ html, body {
 }
 
 .dataTables_filter label input[type=search] {
-  padding: 10px 5px;
+  padding: 10px 5pxx;
   border: 1px solid #1C197E;
   border-radius: 30px;
   font-size: 15px;
@@ -525,8 +525,6 @@ th {
 .settings .settings-container {
   height: 80%;
   width: 80%;
-  border: 1px solid black;
-  padding: 20px;
 }
 .settings .settings-container .nav-tab {
   overflow: hidden;
@@ -555,6 +553,50 @@ th {
 .settings .settings-container .tabcontent {
   padding: 10px;
 }
-.settings .settings-container .settings-content {
+.settings .settings-container #academic form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.settings .settings-container #academic form .settings-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+}
+.settings .settings-container #academic form .settings-section h4 {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 10px 0;
+}
+.settings .settings-container #academic form .settings-section select {
+  margin-right: 20px;
   padding: 10px;
+  color: #1C197E;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #817ECF;
+  outline: none;
+}
+.settings .settings-container #academic form #submit input {
+  color: #fff;
+  font-size: 16px;
+  background: #1C197E;
+  border-radius: 10px;
+  border: 1px solid #817ECF;
+  width: 20%;
+  padding: 10px;
+}
+.settings .settings-container #academic form #submit input[type=submit] {
+  margin-top: 30px;
+  width: 100%;
+}
+.settings .settings-container #academic form #submit input:hover {
+  cursor: pointer;
 }

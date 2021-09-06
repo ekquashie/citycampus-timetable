@@ -4,20 +4,20 @@
 html, body {
     height: 100%;
     width: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial Rounded MT Bold';
 }
 
 .dataTables_filter, .dataTables_length{
     margin-bottom: 10px;
 }
 .dataTables_filter label input[type=search] {
-    padding: 10px 5px;
+    padding: 10px 5pxx;
     border: 1px solid $primary;
     border-radius: 30px;
     font-size: 15px;
@@ -368,8 +368,6 @@ th {
     .settings-container {
         height: 80%;
         width: 80%;
-        border: 1px solid black;
-        padding: 20px;
         .nav-tab {
             overflow: hidden;
             border-bottom: 1px solid $primary-300;
@@ -396,8 +394,49 @@ th {
         .tabcontent {
             padding: 10px;
         }
-        .settings-content {
-            padding: 10px;
+        #academic {
+            form {
+                display: flex;
+                flex-direction: column;
+                .settings-section {
+                    display: flex;
+                    width: 100%;
+                    h4 {
+                        font-size: 16px;
+                        font-weight: 300;
+                        margin: 10px 0;
+                    }
+                    margin-top: 10px;
+                    select {
+                        margin-right: 20px;
+                        padding: 10px;
+                        color: $primary;
+                        font-weight: bold;
+                        font-size: 16px;
+                        border-radius: 10px;
+                        border: 1px solid $primary-300;
+                        outline: none;
+                    }
+                }
+                #submit {
+                    input {
+                        color: #fff;
+                        font-size: 16px;
+                        background: $primary;
+                        border-radius: 10px;
+                        border: 1px solid $primary-300;
+                        width: 20%;
+                        padding: 10px;
+                        &[type=submit] {
+                            margin-top: 30px;
+                            width: 100%;
+                        }
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
         }
     }
 }

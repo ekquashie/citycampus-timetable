@@ -11,6 +11,9 @@
   <head>
     <meta charset='utf-8' name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link href="assets/fontawesome - 5.15.3/css/all.css" rel="stylesheet">
     <link rel="icon" href="assets/img/ug logo.png">
     <link rel="stylesheet" href="components/DataTables/datatables.css">
