@@ -1,7 +1,6 @@
 html, body {
   height: 100%;
   width: 100%;
-  font-family: "Roboto", sans-serif;
 }
 
 * {
@@ -9,6 +8,7 @@ html, body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
 }
 
 .dataTables_filter, .dataTables_length {
@@ -553,6 +553,10 @@ th {
 .settings .settings-container .tabcontent {
   padding: 10px;
 }
+.settings .settings-container #academic {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
 .settings .settings-container #academic form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -562,41 +566,112 @@ th {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.settings .settings-container #academic form .settings-section {
+.settings .settings-container #academic form .academics-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
   margin-top: 10px;
 }
-.settings .settings-container #academic form .settings-section h4 {
+.settings .settings-container #academic form .academics-section h4 {
   font-size: 16px;
   font-weight: 300;
   margin: 10px 0;
 }
-.settings .settings-container #academic form .settings-section select {
+.settings .settings-container #academic form .academics-section select {
   margin-right: 20px;
   padding: 10px;
   color: #1C197E;
   font-weight: bold;
   font-size: 16px;
-  border-radius: 10px;
+  border-radius: none;
   border: 1px solid #817ECF;
   outline: none;
 }
+.settings .settings-container #academic form #submit {
+  width: 100%;
+}
 .settings .settings-container #academic form #submit input {
   color: #fff;
-  font-size: 16px;
-  background: #1C197E;
-  border-radius: 10px;
-  border: 1px solid #817ECF;
-  width: 20%;
   padding: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: none;
+  background: #1C197E;
+  border: 1px solid #817ECF;
 }
 .settings .settings-container #academic form #submit input[type=submit] {
   margin-top: 30px;
   width: 100%;
 }
 .settings .settings-container #academic form #submit input:hover {
+  cursor: pointer;
+}
+.settings .settings-container #schedule form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.settings .settings-container #schedule form h4 {
+  font-size: 14px;
+  font-weight: bold;
+}
+.settings .settings-container #schedule form input {
+  padding: 10px;
+  color: #1C197E;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: none;
+  border: 1px solid #817ECF;
+}
+.settings .settings-container #schedule form .duration {
+  padding: 20px 0;
+}
+.settings .settings-container #schedule form .duration .timetable-schedule {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  font-weight: 300;
+}
+.settings .settings-container #schedule form .duration .timetable-schedule div {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+}
+.settings .settings-container #schedule form .duration .timetable-schedule div input {
+  margin-top: 10px;
+  width: 80%;
+}
+.settings .settings-container #schedule form .sessions {
+  margin: 10px 0;
+}
+.settings .settings-container #schedule #submit {
+  width: 100%;
+}
+.settings .settings-container #schedule #submit input {
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: none;
+  background: #1C197E;
+  border: 1px solid #817ECF;
+}
+.settings .settings-container #schedule #submit input[type=submit] {
+  margin-top: 30px;
+  width: 100%;
+}
+.settings .settings-container #schedule #submit input:hover {
   cursor: pointer;
 }

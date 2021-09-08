@@ -4,13 +4,13 @@
 html, body {
     height: 100%;
     width: 100%;
-    font-family: 'Roboto', sans-serif;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
 }
 
 .dataTables_filter, .dataTables_length{
@@ -395,10 +395,11 @@ th {
             padding: 10px;
         }
         #academic {
+            transition: 0.3s;
             form {
                 display: flex;
                 flex-direction: column;
-                .settings-section {
+                .academics-section {
                     display: flex;
                     width: 100%;
                     h4 {
@@ -413,20 +414,21 @@ th {
                         color: $primary;
                         font-weight: bold;
                         font-size: 16px;
-                        border-radius: 10px;
+                        border-radius: none;
                         border: 1px solid $primary-300;
                         outline: none;
                     }
                 }
                 #submit {
+                    width: 100%;
                     input {
                         color: #fff;
-                        font-size: 16px;
-                        background: $primary;
-                        border-radius: 10px;
-                        border: 1px solid $primary-300;
-                        width: 20%;
                         padding: 10px;
+                        font-weight: bold;
+                        font-size: 16px;
+                        border-radius: none;
+                        background: $primary;
+                        border: 1px solid $primary-300;
                         &[type=submit] {
                             margin-top: 30px;
                             width: 100%;
@@ -434,6 +436,67 @@ th {
                         &:hover {
                             cursor: pointer;
                         }
+                    }
+                }
+            }
+        }
+        #schedule {
+            form {
+                display: flex;
+                flex-direction: column;
+                h4 {
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+                input {
+                    padding: 10px;
+                    color: $primary;
+                    font-weight: bold;
+                    font-size: 16px;
+                    border-radius: none;
+                    border: 1px solid $primary-300;
+                }
+                .duration {
+                    padding: 20px 0;
+                    .timetable-schedule {
+                        display: flex;
+                        font-size: 16px;
+                        font-weight: 300;
+                        div {
+                            margin-top: 10px;
+                            display: flex;
+                            flex-direction: column;
+                            margin:0;
+                            input {
+                                margin-top: 10px;
+                                width: 80%;
+                            }
+                        }
+                    }
+                }
+                .sessions {
+                    margin: 10px 0;
+                    .sessions-container {
+                        
+                    }
+                }
+            }
+            #submit {
+                width: 100%;
+                input {
+                    color: #fff;
+                    padding: 10px;
+                    font-weight: bold;
+                    font-size: 16px;
+                    border-radius: none;
+                    background: $primary;
+                    border: 1px solid $primary-300;
+                    &[type=submit] {
+                        margin-top: 30px;
+                        width: 100%;
+                    }
+                    &:hover {
+                        cursor: pointer;
                     }
                 }
             }
